@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row upper-row mt-5">
+            <div class="col-sm-4 col-12">
+                <div class="row">
+                    <h1 class="top-heading">10,000+ of our users love our products.</h1>
+                </div>
+                <div class="row top-description">
+                    <p>We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.</p>
+                </div>
+            </div>
+            <div class="col-sm-8 col-12 review-cards-col">
+                <div class="row">
+                    <div class="card" id="review-card">
+                        <div class="card-body">
+                            <div class="col-sm-4 col-12">
+                                <ul class="icons-list ">
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-8 col-12">
+                                <h5 class="card-title">Rated 5 Stars in Reviews</h5>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card" id="review-card">
+                        <div class="card-body">
+                            <div class="col-sm-4 col-12">
+                                <ul class="icons-list ">
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-8 col-12">
+                                <h5 class="card-title">Rated 5 Stars in Reviews</h5>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card" id="review-card">
+                        <div class="card-body">
+                            <div class="col-sm-4 col-12">
+                                <ul class="icons-list">
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                    <li class="icon"><img src="assets/images/icon-star.svg" alt="stars"></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-8 col-12">
+                                <h5 class="card-title">Rated 5 Stars in Reviews</h5>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const iconStar = (id) => {
+            for(let i=0; i<=4; i++){
+                document.getElementById(id).innerHTML+='<img src="./assets/images/icon-star.svg">';
+            }
+        }
+        //iconStar('review-card-1');
+        //iconStar('review-card-2');
+        //iconStar('review-card-3');
+    </script>
+</body>
+</html>

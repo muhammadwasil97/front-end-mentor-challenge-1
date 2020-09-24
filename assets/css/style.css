@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan');
+
+body{
+    font-family: 'Spartan';
+    background-image: url('/assets/images/bg-pattern-top-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.top-heading{
+    color: hsl(300, 43%, 22%);
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+}
+
+.top-description{
+    color: hsl(303, 10%, 53%);
+}
+
+.icons-list{
+    list-style-type: none;
+    list-style: none;
+    margin-top: 8px;
+}
+.icons-list .icon{
+    display: inline;
+}
+.review-cards-col{
+    padding-left: 150px;
+}
+.review-cards-col .row #review-card{
+    border-radius: 10px;
+    max-height: 90px;
+}
+.review-cards-col .row:nth-child(2n+0){
+    padding: 10px 0 10px 50px;
+}
+.review-cards-col .row:nth-child(3){
+    padding: 0 0 0 100px;
+}
+#review-card .card-body{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px -10px -10px -10px;
+}
+.icons-list .icon img{
+    width: 17px;
+    height: 16px;
+}
+.card-body div .icons-list{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.icons-list .icon{
+    margin: 0 5px 0 5px;
+}
+#review-card .card-body div .card-title{
+    margin-left: 30px;
+    margin-top: 10px;
+}
