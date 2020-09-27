@@ -6,6 +6,13 @@ body{
     background-repeat: no-repeat;
     background-position: left;
 }
+@media screen and (max-width: 991px){
+    body{
+        background-image: url('/assets/images/bg-pattern-top-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+}
 .top-heading{
     color: hsl(300, 43%, 22%);
     font-family: 'Spartan', sans-serif;
@@ -19,7 +26,9 @@ body{
 .icons-list{
     list-style-type: none;
     list-style: none;
-    margin-top: 8px;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: nowrap;
 }
 .icons-list .icon{
     display: inline;
@@ -29,18 +38,19 @@ body{
 }
 .review-cards-col .row #review-card{
     border-radius: 10px;
-    max-height: 90px;
+    max-height: 50px;
 }
 .review-cards-col .row:nth-child(2n+0){
-    padding: 10px 0 10px 50px;
+    padding: 30px 0 10px 45px;
 }
 .review-cards-col .row:nth-child(3){
-    padding: 0 0 0 100px;
+    padding: 20px 0 0 90px;
 }
 #review-card .card-body{
     display: flex;
     flex-wrap: wrap;
     margin: -10px -10px -10px -10px;
+    background-color: hsl(300, 24%, 96%);
 }
 .icons-list .icon img{
     width: 17px;
@@ -56,5 +66,56 @@ body{
 }
 #review-card .card-body div .card-title{
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top: 5px;
+    color: hsl(300, 43%, 22%);   
+    font-weight: 700;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media screen and (min-width:992px) and (max-width:1200px){
+    .review-cards-col{
+        padding-left: 0px;
+    }   
+}
+@media screen and (max-width:991px) and (min-width:768px){
+    .review-cards-col .row:nth-child(n){
+        padding: 20px 0 20px 0px;
+    }
+    .review-cards-col{
+        margin-left: -50px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .review-cards-col .row:nth-child(n){
+        padding: 20px 0 20px 0px;
+    }
+    .review-cards-col{
+        margin-left: -75px;
+    }
+    .review-cards-col .row #review-card{
+        max-height: 80px;
+    }
+    .icons-list{
+        float: none;
+    }
+}
+@media screen and (max-width: 499px){
+    #review-card .card-body div .card-title{
+        font-size: 15px;
+    }
+    #review-card .card-body{
+        margin: -48px -48px -48px -48px;
+        max-height: 100px;
+    }
+    .review-cards-col .row #review-card{
+        padding: 40px 0 40px 0;
+    }
+}
+
+@media screen and (max-width: 357px){
+    #review-card .card-body div .card-title{
+        font-size: 10px;
+    }
 }
