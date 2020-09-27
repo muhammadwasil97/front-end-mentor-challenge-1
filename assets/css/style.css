@@ -2,15 +2,15 @@
 
 body{
     font-family: 'Spartan';
-    background-image: url('/assets/images/bg-pattern-top-desktop.svg');
+    background-image: url('/assets/images/bg-pattern-top-desktop.svg'), url('/assets/images/bg-pattern-bottom-desktop.svg');
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: left top, right bottom;
 }
 @media screen and (max-width: 991px){
     body{
-        background-image: url('/assets/images/bg-pattern-top-mobile.svg');
+        background-image: url('/assets/images/bg-pattern-top-mobile.svg'), url('/assets/images/bg-pattern-bottom-mobile.svg');
         background-repeat: no-repeat;
-        background-position: top;
+        background-position: top, bottom;
     }
 }
 .top-heading{
@@ -33,18 +33,25 @@ body{
 .icons-list .icon{
     display: inline;
 }
-.review-cards-col{
-    padding-left: 150px;
+.review-cards-col .row{
+    position: relative;
+    left: 17%;
+    padding-right: 120px;
+    margin-left: 10px;
 }
-.review-cards-col .row #review-card{
+.review-cards-col .row .card-body{
     border-radius: 10px;
-    max-height: 50px;
+    max-height: 70px;
+    max-width: 1200px;
+}
+.review-cards-col .row:nth-child(1){
+    padding: 0 60px 0 0;
 }
 .review-cards-col .row:nth-child(2n+0){
-    padding: 30px 0 10px 45px;
+    padding: 30px 30px 10px 25px;
 }
 .review-cards-col .row:nth-child(3){
-    padding: 20px 0 0 90px;
+    padding: 20px 0 0 95px;
 }
 #review-card .card-body{
     display: flex;
@@ -65,37 +72,98 @@ body{
     margin: 0 5px 0 5px;
 }
 #review-card .card-body div .card-title{
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 5px;
     color: hsl(300, 43%, 22%);   
+    font-size: 17px;
     font-weight: 700;
     display: flex;
     flex-wrap: nowrap;
 }
-
-@media screen and (min-width:992px) and (max-width:1200px){
+.lower-row{
+    padding-top: 20px;
+}
+.lower-row .col-lg-4{
+    margin: 0 -40px 0 -40px;
+}
+.lower-row .col-lg-4 .card{
+    border-radius: 8px;
+    background-color: hsl(300, 43%, 22%);
+}
+.reviewer-name{
+    margin-left: -12px;
+}
+.reviewer-name .name{
+    color: white;
+}
+.reviewer-name .role{
+    color: hsl(333, 80%, 67%);
+}
+.avatar img{
+    border-radius: 50%;
+}
+.client-review{
+    color: hsl(300, 24%, 96%);
+}
+.lower-row div .card{
+    min-width: 400px;
+}
+.lower-row{
+    margin: 60px 0 60px 0;
+}
+@media screen and (min-width:992px) and (max-width:1199px){
     .review-cards-col{
         padding-left: 0px;
-    }   
+    }  
+    #review-card .card-body div .card-title{
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: -2px;
+    }
+    .lower-row{
+        margin-left: 20px;
+    } 
+    .lower-row div .card{
+        min-width: 300px;
+        margin: 0 -30px 0 -30px;
+    }
+}
+@media screen and (max-width:1199px){
+    .lower-row .col-lg-4{
+        margin: 10px 0 10px 0;
+    }
+    .lower-row{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .lower-row div .card{
+        min-width: 280px;
+    }
 }
 @media screen and (max-width:991px) and (min-width:768px){
     .review-cards-col .row:nth-child(n){
         padding: 20px 0 20px 0px;
     }
     .review-cards-col{
-        margin-left: -50px;
+        margin-left: 0%;
+    }
+    .review-cards-col .row #review-card .card-body{
+        max-height: 180px;
+        max-width: 400px;
     }
 }
 
 @media screen and (max-width:767px){
     .review-cards-col .row:nth-child(n){
-        padding: 20px 0 20px 0px;
+        padding: 40px 0 40px 0px;
     }
     .review-cards-col{
-        margin-left: -75px;
+        margin-left: -95px;
     }
-    .review-cards-col .row #review-card{
-        max-height: 80px;
+    .review-cards-col .row #review-card .card-body{
+        max-height: 180px;
     }
     .icons-list{
         float: none;
